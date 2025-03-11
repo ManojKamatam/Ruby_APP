@@ -27,6 +27,9 @@ RUN bundle install
 # Copy the rest of the application
 COPY . .
 
+# Create necessary directories
+RUN mkdir -p tmp/pids tmp/sockets log
+
 # Add entrypoint script
 COPY docker/entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh
