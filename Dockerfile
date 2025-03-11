@@ -15,17 +15,20 @@ WORKDIR /app
 # Install Rails
 RUN gem install rails
 
-# Copy Gemfile
+# Copy only Gemfile first
 COPY Gemfile ./
 
-# Create empty Gemfile.lock if it doesn't exist
+# Create an empty Gemfile.lock
 RUN touch Gemfile.lock
 
 # Install dependencies
 RUN bundle install
 
-# Copy the application code
+# Copy the rest of the application
 COPY . .
+
+# Create necessary directories
+RUN mkdir -p tmp/pids tmp/sockets log
 
 # Add entrypoint script
 COPY docker/entrypoint.sh /usr/bin/
