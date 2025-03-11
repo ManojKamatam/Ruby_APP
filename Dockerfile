@@ -15,8 +15,13 @@ WORKDIR /app
 # Install Rails
 RUN gem install rails
 
-# Copy Gemfile and install dependencies
-COPY Gemfile Gemfile.lock ./
+# Copy Gemfile
+COPY Gemfile ./
+
+# Create empty Gemfile.lock if it doesn't exist
+RUN touch Gemfile.lock
+
+# Install dependencies
 RUN bundle install
 
 # Copy the application code
