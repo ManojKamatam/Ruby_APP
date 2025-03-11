@@ -1,0 +1,41 @@
+# Ruby/Rails
+*.rbc
+capybara-*.html
+.rspec
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/public/system
+/coverage/
+/spec/tmp
+*.orig
+rerun.txt
+pickle-email-*.html
+
+# Ignore bundler config
+/.bundle
+
+# Ignore the default SQLite database.
+/db/*.sqlite3
+/db/*.sqlite3-journal
+
+# Ignore all logfiles and tempfiles
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# Environment variables
+.env
+.env.*
+
+# Ignore master key for decrypting credentials
+/config/master.key
+
+# Ignore node_modules
+node_modules/
+
+# Ignore precompiled assets
+/public/assets
+
+# Ignore docker compose override
+docker-compose.override.yml
