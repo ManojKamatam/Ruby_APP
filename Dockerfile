@@ -1,7 +1,3 @@
-
-4. Create the Dockerfile:
-
-```dockerfile
 FROM ruby:3.2.0-slim
 
 # Install essential Linux packages
