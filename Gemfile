@@ -11,7 +11,6 @@ gem 'tzinfo-data'
 group :development, :test do
   gem 'debug'
   gem 'rspec-rails'
-  gem 'rubocop'
 end
 
 group :development do
